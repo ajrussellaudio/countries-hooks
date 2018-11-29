@@ -22,8 +22,8 @@ const App = () => {
     <div className="App">
       <Select onChange={setSelectedCountryCode}>
         <Option index={null} name="Select a country" />
-        {countries.map((country, i) => (
-          <Option key={country.alpha3Code} index={i} {...country} />
+        {countries.map(country => (
+          <Option key={country.alpha3Code} {...country} />
         ))}
       </Select>
       {selectedCountryCode && <Detail code={selectedCountryCode} />}
